@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JobEntry - Job Portal Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h1 class="m-0 text-primary d-flex align-items-center">
+                    <img style="width: 70px;" class="px-2" src="img/global[1]-1-min-min.png" alt="">Globel Prime
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">
+                        <span class="text_hover fw-bold" data-lang-en="Home" data-lang-pl="Strona główna"
+                            data-lang-de="Startseite">Home</span>
+                    </a>
+                    <a href="about.html" class="nav-item nav-link text_hover">
+                        <span data-lang-en="About" data-lang-pl="O nas" data-lang-de="Über uns">About</span>
+                    </a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text_hover" data-bs-toggle="dropdown">
+                            <span data-lang-en="Jobs" data-lang-pl="Praca" data-lang-de="Jobs">Jobs</span>
+                        </a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="job-list.html" class="dropdown-item">
+                                <span data-lang-en="Job List" data-lang-pl="Lista ofert pracy"
+                                    data-lang-de="Stellenliste">Job List</span>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text_hover" data-bs-toggle="dropdown">
+                            <span data-lang-en="Pages" data-lang-pl="Strony" data-lang-de="Seiten">Pages</span>
+                        </a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="sub_combany.html" class="dropdown-item">
+                                <span data-lang-en="Sub Company" data-lang-pl="Podfirma"
+                                    data-lang-de="Untergesellschaft">Globel Green Groves</span>
+                            </a>
+                            <!-- Add more pages if needed -->
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link text_hover">
+                        <span data-lang-en="Contact" data-lang-pl="Kontakt" data-lang-de="Kontakt">Contact</span>
+                    </a>
+                </div>
+                <!-- Language Switcher Start -->
+                <div class="dropdown language-switcher bttn">
+                    <button class="btn btn-secondary dropdown-toggle bttn" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Language
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('en', 'English')">English</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('pl', 'Polish')">Polish</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('de', 'German')">German</a></li>
+                    </ul>
+                </div>
+                <!-- Language Switcher End -->
+                <a href="job-list.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
+                    id="post-job-btn" data-lang-en="Post A Job" data-lang-pl="Dodaj ofertę pracy"
+                    data-lang-de="Stellenanzeige aufgeben">
+                    Post A Job<i class="fa fa-arrow-right ms-3"></i>
+                </a>
+            </div>
+
+        </nav>
+        <!-- Navbar End -->
+
+
+
+
+
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="img/bg main 1.jpg"
+                        style="width: 100%; height: 800px;" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                        style="background: rgba(14, 18, 20, 0.178);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-3 text-white animated slideInDown mb-4"
+                                        data-lang-en="Find The Perfect Job That You Deserved"
+                                        data-lang-pl="Znajdź idealną pracę, na którą zasługujesz"
+                                        data-lang-de="Finde den perfekten Job, den du verdienst">
+                                        Find The Perfect Job That You Deserved
+                                    </h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2"
+                                        data-lang-en="Since its founding, Global Prime has been dedicated to providing skilled manpower and support services to companies. We carefully select top talent and strive to bring out the best in each individual. Global Prime is committed to expanding into diverse service fields to meet the needs of our clients, partners, and employees. We believe in working toward a better world!"
+                                        data-lang-pl="Od momentu założenia firma Global Prime angażuje się w dostarczanie wykwalifikowanej kadry i usług wsparcia dla firm. Starannie wybieramy najlepsze talenty i staramy się wydobyć z każdej osoby to, co najlepsze. Global Prime zobowiązuje się do rozwijania swojej działalności w różnych obszarach usług, aby sprostać potrzebom naszych klientów, partnerów i pracowników. Wierzymy w budowanie lepszego świata!"
+                                        data-lang-de="Seit ihrer Gründung engagiert sich Global Prime dafür, qualifizierte Arbeitskräfte und Unterstützungsdienste für Unternehmen bereitzustellen. Wir wählen sorgfältig die besten Talente aus und bemühen uns, das Beste aus jeder Einzelperson herauszuholen. Global Prime verpflichtet sich, in verschiedene Dienstleistungsbereiche zu expandieren, um den Bedürfnissen unserer Kunden, Partner und Mitarbeiter gerecht zu werden. Wir glauben daran, an einer besseren Welt zu arbeiten!">
+                                        Since its founding, Global Prime has been dedicated to providing skilled
+                                        manpower and support services to companies. We carefully select top talent and
+                                        strive to bring out the best in each individual. Global Prime is committed to
+                                        expanding into diverse service fields to meet the needs of our clients,
+                                        partners, and employees. We believe in working toward a better world!
+                                    </p>
+
+
+                                    <a href="job-list.html"
+                                        class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                                        data-lang-en="Search A Job" data-lang-pl="Szukaj pracy"
+                                        data-lang-de="Job suchen">
+                                        Search A Job
+                                    </a>
+                                    <a href="job-list.html"
+                                        class="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
+                                        data-lang-en="Find A Talent" data-lang-pl="Znajdź talent"
+                                        data-lang-de="Finde ein Talent">
+                                        Find A Talent
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="img/2151589655.jpg" style="width: 100%; height: 800px;" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                        style="background: rgba(46, 13, 2, 0.164);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-3 text-white animated slideInDown mb-4"
+                                        data-lang-en="Find The Best  Job That Fit You"
+                                        data-lang-pl="Znajdź najlepszą pracę w , która do Ciebie pasuje"
+                                        data-lang-de="Finde den besten Job, der zu dir passt">
+                                        Find The Best Job That Fit You
+                                    </h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2"
+                                        data-lang-en="Global Prime LLC specializes in manpower consulting and job placements across Europe. Led by an experienced management team, we engage in diverse projects and international partnerships, connecting talented professionals with career opportunities."
+                                        data-lang-pl="Global Prime LLC specjalizuje się w doradztwie personalnym i rekrutacji na terenie Europy. Zarządzany przez doświadczony zespół, realizujemy różnorodne projekty i międzynarodowe partnerstwa, łącząc utalentowanych specjalistów z możliwościami zawodowymi."
+                                        data-lang-de="Global Prime LLC spezialisiert sich auf Personalberatung und Stellenvermittlung in ganz Europa. Geleitet von einem erfahrenen Managementteam beteiligen wir uns an vielfältigen Projekten und internationalen Partnerschaften, die talentierte Fachkräfte mit Karrieremöglichkeiten verbinden.">
+                                        Global Prime LLC specializes in manpower consulting and job placements across
+                                        Europe. Led by an experienced management team, we engage in diverse projects and
+                                        international partnerships, connecting talented professionals with career
+                                        opportunities.
+                                    </p>
+
+
+                                    <a href="job-list.html"
+                                        class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                                        data-lang-en="Search A Job" data-lang-pl="Szukaj pracy"
+                                        data-lang-de="Job suchen">
+                                        Search A Job
+                                    </a>
+                                    <a href="job-list.html"
+                                        class="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
+                                        data-lang-en="Find A Talent" data-lang-pl="Znajdź talent"
+                                        data-lang-de="Finde ein Talent">
+                                        Find A Talent
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+
+
+        <!-- Search Start -->
+        <!-- <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-10">
+                        <div class="row g-2">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control border-0" placeholder="Keyword" />
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-select border-0">
+                                    <option selected>Category</option>
+                                    <option value="1">Category 1</option>
+                                    <option value="2">Category 2</option>
+                                    <option value="3">Category 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-select border-0">
+                                    <option selected>Location</option>
+                                    <option value="1">Location 1</option>
+                                    <option value="2">Location 2</option>
+                                    <option value="3">Location 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-dark border-0 w-100">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Search End -->
+
+        <!-- Who We Are Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" data-lang-en="Who We Are"
+                    data-lang-pl="Kim jesteśmy" data-lang-de="Wer wir sind">
+                    Who We Are
+                </h1>
+                <h5 class="text-center mb-5 wow fadeInUp fs-6 px-6" data-wow-delay="0.1s" style="text-align: justify;"
+                    data-lang-en="Established in 2024, global prime has since been diversifying into various endeavors and international joint ventures as manpower job placement consultants, headed by a team of experienced management, and we provide jobs in Europe and employ talented professionals."
+                    data-lang-pl="Założona w 2024 roku, Global prime od tego czasu dywersyfikuje się w różne przedsięwzięcia i międzynarodowe wspólne przedsięwzięcia jako konsultanci w zakresie pozyskiwania pracowników, kierowani przez zespół doświadczonego zarządzania, a my oferujemy pracę w Europe i zatrudniamy utalentowanych profesjonalistów."
+                    data-lang-de="Gegründet im Jahr 2024, hat sich Global prime seither in verschiedene Unternehmungen und internationale Joint Ventures diversifiziert, als Personalvermittler geleitet von einem erfahrenen Managementteam, und wir bieten Jobs in Europe an und beschäftigen talentierte Fachkräfte.">
+                    Established in 2024, Globa prime Limited Liability Company has since been diversifying into various
+                    endeavors and international
+                    joint ventures as manpower job placement consultants, headed by a team of experienced management,
+                    and we provide jobs in Europe and employ talented professionals.
+                </h5>
+                <div class="row g-4">
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item rounded p-1" href="">
+                            <img class="img-fluid" src="img/global_img.avif" style="width: 100%;height: 400px;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp subtext" data-wow-delay="0.3s">
+                        <div class="text-center"><img class="img-fluid" src="img/rb_7040.png" alt=""
+                                style="width: 100px; height: 100px;"></div>
+                        <a class="p-1" href="" style="text-align: justify;">
+                            <p class="">
+                                <span style="text-align: justify;"
+                                    data-lang-en="Ever since Globel Prime was built, its objective is to provide manpower jobs and other miscellaneous work to companies. We hire the optimal and make the excellence of them. Global prime is keenly dedicated to expand in all different kind of fields relating to service, in order to satisfy our customers, companies, and employees. Our uncompromising principle has led us to such achievements. We believe in changing to a better world."
+                                    data-lang-pl="Od momentu powstania Globel Prime jego celem jest zapewnienie pracy w zakresie siły roboczej oraz innych różnorodnych zadań dla firm. Zatrudniamy najlepszych i osiągamy doskonałość. Global prime z zaangażowaniem dąży do rozwoju we wszystkich różnych dziedzinach związanych z usługami, aby zadowolić naszych klientów, firmy i pracowników. Nasza bezkompromisowa zasada doprowadziła nas do takich osiągnięć. Wierzymy w zmianę na lepszy świat."
+                                    data-lang-de="Seit der Gründung von Globel Prime besteht das Ziel darin, Arbeitskräfte und andere verschiedene Aufgaben für Unternehmen bereitzustellen. Wir stellen die Besten ein und erreichen Exzellenz. Global prime ist bestrebt, in allen verschiedenen Bereichen, die mit Dienstleistungen zu tun haben, zu expandieren, um unsere Kunden, Unternehmen und Mitarbeiter zufriedenzustellen. Unser kompromissloses Prinzip hat uns zu solchen Erfolgen geführt. Wir glauben daran, eine bessere Welt zu verändern.">
+                                    Ever since Globel Prime was built, its objective is to provide manpower jobs and
+                                    other miscellaneous work to companies. We hire the optimal and make the excellence
+                                    of them. Global prime is keenly dedicated to expanding in all different kinds of
+                                    fields
+                                    relating to service, in order to satisfy our customers, companies, and employees.
+                                    Our uncompromising principle has led us to such achievements. We believe in changing
+                                    to a better world.
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp subtext_second" data-wow-delay="0.3s">
+                        <a class="p-1" href="" style="text-align: justify;">
+                            <h2 data-lang-en="GET YOUR EXATUAL ASSISTANT" data-lang-pl="UZYSKAJ SWOJEGO ASYSTENTA"
+                                data-lang-de="BEKOMMEN SIE IHREN EXATUAL ASSISTENTEN">
+                                GET YOUR EXATUAL ASSISTANT
+                            </h2>
+                            <h3 data-lang-en="Exatual Assistants doing the right things at the right time!"
+                                data-lang-pl="Asystenci Exatual robią właściwe rzeczy we właściwym czasie!"
+                                data-lang-de="Exatual-Assistenten tun die richtigen Dinge zur richtigen Zeit!">
+                                Exatual Assistants doing the right things at the right time!
+                            </h3>
+                            <span
+                                data-lang-en="Forward new normal that evolved from generation is on the runway heading towards streamlined cloud solution."
+                                data-lang-pl="Nowa norma, która wyewoluowała z pokolenia, zmierza w kierunku zharmonizowanego rozwiązania chmurowego."
+                                data-lang-de="Die neue Normalität, die aus der Generation entstanden ist, steuert auf eine optimierte Cloud-Lösung zu.">
+                                Forward new normal that evolved from generation is on the runway heading towards
+                                streamlined cloud solution.
+                            </span>
+                            <span class="d-flex justify-content-evenly align-items-center pt-4 ">
+                                <div class="p-2"><img
+                                        src="https://img.icons8.com/?size=100&id=20183&format=png&color=000000"
+                                        style="width: 50px;" alt=""></div>
+                                <div class="">
+                                    <div data-lang-en="Get decided business results"
+                                        data-lang-pl="Uzyskaj określone wyniki biznesowe"
+                                        data-lang-de="Entscheidende Geschäftsergebnisse erzielen">
+                                        Get decided business results
+                                    </div>
+                                    <div data-lang-en="Capitalize on low hanging deep fruit to identify value"
+                                        data-lang-pl="Skorzystaj z łatwych do uzyskania owoców, aby zidentyfikować wartość"
+                                        data-lang-de="Nutzen Sie einfach zu erreichende Früchte, um Wert zu identifizieren">
+                                        Capitalize on low hanging deep fruit to identify value
+                                    </div>
+                                </div>
+                            </span>
+
+                            <span class="d-flex justify-content-evenly align-items-center pt-4">
+                                <div class="p-2"><img
+                                        src="https://img.icons8.com/?size=100&id=97525&format=png&color=000000"
+                                        style="width: 50px;" alt=""></div>
+                                <div class="">
+                                    <div data-lang-en="Save time with qualified assistants"
+                                        data-lang-pl="Zaoszczędź czas dzięki wykwalifikowanym asystentom"
+                                        data-lang-de="Zeit mit qualifizierten Assistenten sparen">
+                                        Save time with qualified assistants
+                                    </div>
+                                    <div data-lang-en="Capitalize on low hanging deep fruit to identify value"
+                                        data-lang-pl="Skorzystaj z łatwych do uzyskania owoców, aby zidentyfikować wartość"
+                                        data-lang-de="Nutzen Sie einfach zu erreichende Früchte, um Wert zu identifizieren">
+                                        Utilize readily available opportunities to identify value.
+                                    </div>
+                                </div>
+                            </span>
+
+                            <span class="d-flex justify-content-evenly align-items-center pt-4">
+                                <div class="p-2"><img
+                                        src="https://img.icons8.com/?size=100&id=999&format=png&color=000000"
+                                        style="width: 50px;" alt=""></div>
+                                <div class="">
+                                    <div data-lang-en="Quick formulate your all plans"
+                                        data-lang-pl="Szybko sformułuj wszystkie plany"
+                                        data-lang-de="Formulieren Sie schnell alle Ihre Pläne">
+                                        Quick formulate your all plans
+                                    </div>
+                                    <div data-lang-en="Capitalize on low hanging deep fruit to identify value"
+                                        data-lang-pl="Skorzystaj z łatwych do uzyskania owoców, aby zidentyfikować wartość"
+                                        data-lang-de="Nutzen Sie einfach zu erreichende Früchte, um Wert zu identifizieren">
+                                        Leverage easily accessible opportunities to uncover value.
+                                    </div>
+                                </div>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item rounded p-1" href="">
+                            <img class="img-fluid" src="img/two-colleagues-factory.jpg" style="width: 100%;height: 500px;" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Who We Are End -->
+
+
+
+
+
+
+        <!-- Our Services Start -->
+        <div class="py-5">
+            <div class="container">
+                <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" data-lang-en="Our Services"
+                    data-lang-pl="Nasze Usługi" data-lang-de="Unsere Dienstleistungen">
+                    Our Services
+                </h1>
+
+                <h5 class="text-center mb-5 wow fadeInUp fs-6 px-6" data-wow-delay="0.1s"
+                    data-lang-en="Global prime as a welding outsourcing company and MIG, MAG and TIG outsourcing service, provides a wide and comprehensive range of professional services to both local and international businesses to meet your company's global business needs. Our firm is an assurance of the highest quality of skilled jobs service and skilled workers through our professional team especially if you are looking forward for a skilled manpower outsourcing agency."
+                    data-lang-pl="Global prime jako firma outsourcingowa zajmująca się spawaniem oraz usługami MIG, MAG i TIG, oferuje szeroką i kompleksową gamę usług profesjonalnych zarówno dla firm lokalnych, jak i międzynarodowych, aby sprostać globalnym potrzebom Twojej firmy. Nasza firma jest zapewnieniem najwyższej jakości usług pracy wykwalifikowanej i wykwalifikowanych pracowników poprzez nasz profesjonalny zespół, zwłaszcza jeśli szukasz agencji outsourcingowej wykwalifikowanej siły roboczej."
+                    data-lang-de="Global prime als Schweiß-Outsourcing-Unternehmen und MIG-, MAG- und TIG-Outsourcing-Service bietet eine breite und umfassende Palette professioneller Dienstleistungen für lokale und internationale Unternehmen, um den globalen Geschäftsbedürfnissen Ihres Unternehmens gerecht zu werden. Unsere Firma garantiert die höchste Qualität an Dienstleistungen für Fachkräfte und Facharbeiter durch unser professionelles Team, insbesondere wenn Sie auf der Suche nach einer Agentur für das Outsourcing von Fachkräften sind.">
+                    Global prime as a welding outsourcing company and MIG, MAG and TIG outsourcing service, provides a
+                    wide and
+                    comprehensive range of professional services to both local and international businesses to meet your
+                    company's
+                    global business needs. Our firm is an assurance of the highest quality of skilled jobs service and
+                    skilled workers
+                    through our professional team especially if you are looking forward for a skilled manpower
+                    outsourcing agency.
+                </h5>
+
+
+                <div class="row g-4 our-service">
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="zoom-container">
+                            <img src="img/global_welding.jpg" alt="Welding Services" class="zoom-img">
+                            <div class="services">
+                                <span data-lang-en="Welding Services" data-lang-pl="Usługi Spawalnicze"
+                                    data-lang-de="Schweißdienste" class="weldingHead">Welding <br> Services</span>
+                                <p class="subwelding"
+                                    data-lang-en="We provide expert welding services, delivering precision and durability for all industrial and custom projects."
+                                    data-lang-pl="Świadczymy profesjonalne usługi spawalnicze, zapewniając precyzję i trwałość dla wszystkich projektów przemysłowych i niestandardowych."
+                                    data-lang-de="Wir bieten professionelle Schweißdienstleistungen und liefern Präzision und Haltbarkeit für alle industriellen und maßgeschneiderten Projekte.">
+                                    We provide expert welding services, delivering precision and durability for all
+                                    industrial and custom projects.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="zoom-container">
+                            <img src="img/global_constration.jpg" alt="Construction Services" class="zoom-img">
+                            <div class="services">
+                                <span data-lang-en="Construction Services" data-lang-pl="Usługi Budowlane"
+                                    data-lang-de="Bau Dienstleistungen" class="weldingHead">Construction <br> Services</span>
+                                <p class="subwelding"
+                                    data-lang-en="We provide end-to-end construction services, managing each phase with precision and attention to detail. Our team is committed to delivering high-quality, dependable results tailored to your project goals."
+                                    data-lang-pl="Świadczymy kompleksowe usługi budowlane, zarządzając każdym etapem z precyzją i dbałością o szczegóły. Nasz zespół dąży do dostarczania wysokiej jakości, niezawodnych wyników dostosowanych do celów Twojego projektu."
+                                    data-lang-de="Wir bieten umfassende Baudienstleistungen an und betreuen jede Phase mit Präzision und Liebe zum Detail. Unser Team ist bestrebt, qualitativ hochwertige, zuverlässige Ergebnisse zu liefern, die auf Ihre Projektziele zugeschnitten sind.">
+                                    We provide end-to-end construction services, managing each phase with precision and
+                                    attention to detail. Our team is committed to delivering high-quality, dependable
+                                    results tailored to your project goals.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row g-4 our-service">
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="zoom-container">
+                            <img src="img/2151657872.jpg" alt="Skilled Worker Services" class="zoom-img">
+                            <div class="services">
+                                <span data-lang-en="Skilled Worker Services" data-lang-pl="Usługi Spawalnicze"
+                                    data-lang-de="Schweißdienste" class="weldingHead">Skilled Worker <br> Services</span>
+                                <p class="subwelding"
+                                    data-lang-en="Our skilled worker services connect you with experienced professionals trained to handle specialized tasks with precision. We ensure you have the right talent to enhance productivity and meet project requirements."
+                                    data-lang-pl="Nasze usługi dostarczania wykwalifikowanych pracowników łączą Cię z doświadczonymi specjalistami, którzy są szkoleni do precyzyjnego wykonywania specjalistycznych zadań. Zapewniamy odpowiednie talenty, aby zwiększyć produktywność i spełnić wymagania projektu."
+                                    data-lang-de="Unsere Dienstleistungen für qualifizierte Arbeitskräfte verbinden Sie mit erfahrenen Fachleuten, die darauf geschult sind, spezialisierte Aufgaben präzise zu erledigen. Wir stellen sicher, dass Sie das richtige Talent haben, um die Produktivität zu steigern und Projektanforderungen zu erfüllen.">
+                                    Our skilled worker services connect you with experienced professionals trained to
+                                    handle specialized tasks with precision. We ensure you have the right talent to
+                                    enhance productivity and meet project requirements.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="zoom-container">
+                            <img src="img/94.jpg" alt="Production Worker Services" class="zoom-img">
+                            <div class="services">
+                                <span data-lang-en="Production Worker Services" data-lang-pl="Usługi Budowlane"
+                                    data-lang-de="Bau Dienstleistungen" class="weldingHead">Production Worker<br>
+                                    Services</span>
+                                <p class="subwelding"
+                                    data-lang-en="Our production worker services supply dependable, efficient labor to support seamless workflow and productivity. We match skilled workers to your specific needs, ensuring quality and consistency in every task."
+                                    data-lang-pl="Nasze usługi pracowników produkcyjnych zapewniają niezawodną i wydajną siłę roboczą, wspierając płynność pracy i produktywność. Dopasowujemy wykwalifikowanych pracowników do Twoich potrzeb, zapewniając jakość i spójność w każdym zadaniu."
+                                    data-lang-de="Unsere Dienstleistungen für Produktionsarbeiter bieten zuverlässige und effiziente Arbeitskräfte, um einen reibungslosen Arbeitsablauf und Produktivität zu unterstützen. Wir bringen qualifizierte Arbeitskräfte mit Ihren spezifischen Anforderungen in Einklang und gewährleisten Qualität und Konsistenz bei jeder Aufgabe.">
+                                    Our production worker services supply dependable, efficient labor to support
+                                    seamless workflow and productivity. We match skilled workers to your specific needs,
+                                    ensuring quality and consistency in every task.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="text-center mb-5 wow fadeInUp fs-6 px-6" data-wow-delay="0.1s"
+                    data-lang-en="We provide reliable, skilled support for all your projects—whether it’s precision work, end-to-end project management, seamless production, or specialized expertise. Our team ensures quality, efficiency, and a perfect fit for your needs. Trust us to deliver results that elevate your business."
+                    data-lang-pl="Zapewniamy niezawodne i wykwalifikowane wsparcie dla wszystkich Twoich projektów—czy to precyzyjna praca, kompleksowe zarządzanie projektami, płynna produkcja, czy specjalistyczna wiedza. Nasz zespół gwarantuje jakość, wydajność i idealne dopasowanie do Twoich potrzeb. Zaufaj nam, aby dostarczyć wyniki, które podniosą Twoją firmę na wyższy poziom."
+                    data-lang-de="Wir bieten zuverlässige und qualifizierte Unterstützung für all Ihre Projekte—sei es präzise Arbeit, umfassendes Projektmanagement, nahtlose Produktion oder spezialisierte Expertise. Unser Team gewährleistet Qualität, Effizienz und die perfekte Passform für Ihre Bedürfnisse. Vertrauen Sie uns, Ergebnisse zu liefern, die Ihr Unternehmen aufwerten.">
+                    We provide reliable, skilled support for all your projects—whether it’s precision work, end-to-end
+                    project
+                    management, seamless production, or specialized expertise. Our team ensures quality, efficiency, and
+                    a
+                    perfect fit for your needs. Trust us to deliver results that elevate your business.
+                </h5>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+
+    <!-- Our Services End -->
+
+
+
+
+
+    <!-- Category Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" data-lang-en="Explore By Category"
+                data-lang-pl="Zbadaj Kategorię" data-lang-de="Kategorie Erkunden">
+                Explore By Category
+            </h1>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Marketing" data-lang-pl="Marketing" data-lang-de="Marketing">
+                            Marketing
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Customer Service" data-lang-pl="Obsługa Klienta"
+                            data-lang-de="Kundenservice">
+                            Customer Service
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Human Resource" data-lang-pl="Zasoby Ludzkie"
+                            data-lang-de="Personalwesen">
+                            Human Resource
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-tasks text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Project Management" data-lang-pl="Zarządzanie Projektem"
+                            data-lang-de="Projektmanagement">
+                            Project Management
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-chart-line text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Business Development" data-lang-pl="Rozwój Biznesu"
+                            data-lang-de="Geschäftsentwicklung">
+                            Business Development
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Sales & Communication" data-lang-pl="Sprzedaż i Komunikacja"
+                            data-lang-de="Verkauf & Kommunikation">
+                            Sales & Communication
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Teaching & Education" data-lang-pl="Nauczanie i Edukacja"
+                            data-lang-de="Lehre & Bildung">
+                            Teaching & Education
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-drafting-compass text-primary mb-4"></i>
+                        <h6 class="mb-3" data-lang-en="Design & Creative" data-lang-pl="Projektowanie i Kreatywność"
+                            data-lang-de="Design & Kreativ">
+                            Design & Creative
+                        </h6>
+                        <p class="mb-0" data-lang-en="Read More" data-lang-pl="Czytaj Więcej"
+                            data-lang-de="Mehr Erfahren">
+                            Read More
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Category End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="row g-0 about-bg rounded overflow-hidden">
+                        <div class="col-6 text-start">
+                            <img class="img-fluid w-100" src="img/about-1.jpg" alt="About Image 1">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid" src="img/about-2.jpg" style="width: 85%; margin-top: 15%;"
+                                alt="About Image 2">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid" src="img/about-3.jpg" style="width: 85%;" alt="About Image 3">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid w-100" src="img/about-4.jpg" alt="About Image 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-4" data-lang-en="We Help You Find the Perfect Job and Discover Top Talent"
+                        data-lang-pl="Pomagamy Ci znaleźć idealną pracę i odkryć najlepsze talenty"
+                        data-lang-de="Wir helfen Ihnen, den perfekten Job zu finden und Top-Talente zu entdecken">
+                        <!-- Default to English -->
+                        We Help You Find the Perfect Job and Discover Top Talent
+                    </h1>
+
+                    <p class="mb-4"
+                        data-lang-en="Whether you’re looking to land your dream job or find exceptional talent, we're here to support you every step of the way. Our platform connects job seekers with top employers, creating opportunities for growth and success. With a focus on excellence and meaningful connections, we ensure that you’re always in the best hands."
+                        data-lang-pl="Niezależnie od tego, czy szukasz pracy marzeń, czy chcesz znaleźć wyjątkowy talent, jesteśmy tutaj, aby wspierać Cię na każdym kroku. Nasza platforma łączy poszukujących pracy z najlepszymi pracodawcami, tworząc możliwości rozwoju i sukcesu."
+                        data-lang-de="Egal, ob Sie Ihren Traumjob finden oder außergewöhnliche Talente entdecken möchten, wir unterstützen Sie auf jedem Schritt. Unsere Plattform verbindet Jobsuchende mit führenden Arbeitgebern und schafft Chancen für Wachstum und Erfolg.">
+                        <!-- Default to English -->
+                        Whether you’re looking to land your dream job or find exceptional talent, we're here to support
+                        you every step of the way.
+                    </p>
+
+                    <p><i class="fa fa-check text-primary me-3"></i>
+                        <span data-lang-en="Connecting You with Opportunities"
+                            data-lang-pl="Łączymy Cię z możliwościami" data-lang-de="Verbinden Sie mit Chancen">
+                            Connecting You with Opportunities
+                        </span>
+                    </p>
+                    <p><i class="fa fa-check text-primary me-3"></i>
+                        <span data-lang-en="Empowering Career Growth" data-lang-pl="Wspieramy rozwój kariery"
+                            data-lang-de="Fördern Sie das Karrierewachstum">
+                            Empowering Career Growth
+                        </span>
+                    </p>
+                    <p><i class="fa fa-check text-primary me-3"></i>
+                        <span data-lang-en="Building Lasting Connections" data-lang-pl="Budowanie trwałych połączeń"
+                            data-lang-de="Dauerhafte Verbindungen aufbauen">
+                            Building Lasting Connections
+                        </span>
+                    </p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="text-center mb-5" data-lang-en="Our Clients Say!!!" data-lang-pl="Co Mówią Nasi Klienci!!!"
+                data-lang-de="Was Unsere Kunden Sagen!!!">
+                Our Clients Say!!!
+            </h1>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item bg-light rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p data-lang-en="This service transformed my career!"
+                        data-lang-pl="Ta usługa zmieniła moją karierę!"
+                        data-lang-de="Dieser Service hat meine Karriere verändert.">
+                        This service transformed my career!
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg"
+                            style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1" data-lang-en="Alice Johnson" data-lang-pl="Alicja Kowalska"
+                                data-lang-de="Alice Müller">
+                                Alice Johnson
+                            </h5>
+                            <small data-lang-en="Marketing Manager" data-lang-pl="Menadżer Marketingu"
+                                data-lang-de="Marketing Manager">Marketing Manager</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p data-lang-en="I found my dream job thanks to this platform."
+                        data-lang-pl="Znalazłem swoją wymarzoną pracę dzięki tej platformie."
+                        data-lang-de="Ich habe meinen Traumjob dank dieser Plattform gefunden.">
+                        I found my dream job thanks to this platform.
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg"
+                            style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1" data-lang-en="Mark Smith" data-lang-pl="Marek Nowak"
+                                data-lang-de="Markus Schmidt">
+                                Mark Smith
+                            </h5>
+                            <small data-lang-en="Software Engineer" data-lang-pl="Inżynier Oprogramowania"
+                                data-lang-de="Software Ingenieur">Software Engineer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p data-lang-en="Exceptional service and support throughout the process!"
+                        data-lang-pl="Wyjątkowa obsługa i wsparcie przez cały proces!"
+                        data-lang-de="Ausgezeichneter Service und Unterstützung während des gesamten Prozesses!">
+                        Exceptional service and support throughout the process!
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg"
+                            style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1" data-lang-en="Sarah Brown" data-lang-pl="Sara Brąz"
+                                data-lang-de="Sarah Braun">
+                                Sarah Brown
+                            </h5>
+                            <small data-lang-en="Product Designer" data-lang-pl="Projektant Produktów"
+                                data-lang-de="Produktdesigner">Product Designer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p data-lang-en="I highly recommend this service!" data-lang-pl="Gorąco polecam tę usługę!"
+                        data-lang-de="Ich kann diesen Service nur empfehlen!">
+                        I highly recommend this service!
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-4.jpg"
+                            style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1" data-lang-en="John Doe" data-lang-pl="Jan Kowalski"
+                                data-lang-de="Johann Schmidt">
+                                John Doe
+                            </h5>
+                            <small data-lang-en="Business Analyst" data-lang-pl="Analityk Biznesowy"
+                                data-lang-de="Business Analyst">Business Analyst</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+
+
+    <!-- Footer Start -->
+
+
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h2 class="fw-bold text-primary mb-4"><span class="text-secondary">Global Prime</span></h2>
+                    <p>Your Reliable Gateway to New Job Opportunities</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1"
+                            href="https://x.com/Globalprimepl" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1"
+                            href="https://www.facebook.com/share/Kg7qa5sD9yuSqQcn/?mibextid=LQQJ4d" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1"
+                            href="https://youtube.com/@globalprimeofficial?si=dt-liaDtuNJxK0Kf" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0"
+                            href="https://www.instagram.com/globalprime_official?igsh=MWJ4MTliaTliZGkwMw%3D%3D&utm_source=qr"
+                            target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>
+                        Starodębska 9,<br>
+                        87-800 Włocławek, <br>
+                        Poland
+                    </p>
+                    <p>
+                        <i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:+48786200007" class="text-light">+48 786 200 007</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-whatsapp me-3"></i>
+                        <a href="https://wa.me/48786200007" class="text-light">WhatsApp</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:globalprime@gmail.com" class="text-light">globalprime@gmail.com</a>
+                    </p>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <h class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Stay Connected with Global Prime </h4>
+                    <p>Subscribe to our newsletter for the latest updates, exclusive offers, and insights into
+                        sustainable living.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5 border border-light rounded"
+                            type="email" placeholder="Enter your email address">
+                        <button type="button"
+                            class="btn btn-primary py-2 px-4 position-absolute top-0 end-0 mt-2 me-2 rounded">Subscribe</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By |
+                        <a href="mailto:jkjack203@gmail.com">jkjack203@gmail.com</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to switch languages
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang-en]');
+            elements.forEach(element => {
+                const translation = element.getAttribute(`data-lang-${lang}`);
+                if (translation) {
+                    element.innerText = translation;
+                }
+            });
+        }
+
+        // Hide spinner once the page loads
+        window.onload = function () {
+            document.getElementById('spinner').style.display = 'none';
+        };
+
+
+        function setLanguage(lang, languageText) {
+            // Update the dropdown button text to the selected language
+            document.getElementById('languageDropdown').textContent = languageText;
+
+            // Set the language on the page (this is just an example; replace with your language switching logic)
+            const elements = document.querySelectorAll('[data-lang-en], [data-lang-pl], [data-lang-de]');
+            elements.forEach(el => {
+                if (lang === 'en') {
+                    el.textContent = el.getAttribute('data-lang-en');
+                } else if (lang === 'pl') {
+                    el.textContent = el.getAttribute('data-lang-pl');
+                } else if (lang === 'de') {
+                    el.textContent = el.getAttribute('data-lang-de');
+                }
+            });
+        }
+    </script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

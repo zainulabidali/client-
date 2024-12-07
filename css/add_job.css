@@ -1,0 +1,35 @@
+
+.form-wrapper
+{
+background: #acb6e5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	height: 100%;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.form-wrapper .form-control-lg, .form-wrapper .btn-lg
+{
+	border-radius: .9rem;
+}
+.form-wrapper h1 {
+  color: #3d3d3d;
+}
+.form-wrapper .form-page-center 
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@media (min-width: 768px){
+	.form-wrapper form .form-group.w-md-25
+	{
+		width: 20%;
+	}
+}

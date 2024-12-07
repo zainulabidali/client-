@@ -1,0 +1,34 @@
+h2{
+    color: rgb(19,43,169);
+}
+
+.weldingHead{
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.services{
+    text-align: center;
+    padding: 0px 87px 0px 1px;
+    width: 80%;
+}
+
+
+.img:hover
+{
+ padding: 50px;
+ transition: 1s;
+ transition-duration: 2s;
+}
+
+.weldingHead:hover{
+    padding: -30px;
+}
+
+.subwelding{
+    color: white;
+    text-align: justify;
+    line-height: 30px;
+    width: 500px;
+}
